@@ -1,0 +1,5 @@
+# One lowercase substring per line. Any program path containing it shows in the Generics column.
+loader
+injector
+spoofer
+bypass

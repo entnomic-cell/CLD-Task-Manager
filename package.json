@@ -1,0 +1,39 @@
+{
+  "name": "forensic-task-manager",
+  "productName": "CLD Task Manager",
+  "version": "1.3.2",
+  "description": "A local Windows process and system activity viewer.",
+  "author": "CLD",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "local.cld.taskmanager",
+    "asar": false,
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "resources/cld-task-manager.ico",
+      "resources/cld-mark.svg",
+      "backend.py",
+      "rules/yara-rules-core.yar",
+      "generics.txt",
+      "requirements.txt",
+      "THIRD_PARTY_NOTICES.md",
+      "README.md",
+      "package.json"
+    ],
+    "win": {
+      "icon": "resources/cld-task-manager.ico",
+      "target": ["portable"]
+    }
+  }
+}
